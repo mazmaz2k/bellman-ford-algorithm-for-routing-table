@@ -1,0 +1,36 @@
+User Name(login): omrimi
+Full Name and ID: Omri Mizrahi 303082549
+Exercise 3
+include files: "ex3.c" & "ex3.h" & "makefile"
+-------------------------------------------------------------------------------------------------
+File:		---> "ex3.c" & "ex3.h" 
+-------------------------------------------------------------------------------------------------
+Explanation:
+-------------------------------------------------------------------------------------------------
+Those are the most important file in our program,It includes all the algorithms that the program use.our program is simulate routers network and find the closest way to each router in the network.
+
+-------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
+Additional explanation:
+-------------------------------------------------------------------------------------------------
+Our program operate "belman Ford " algoritem to find for each router in the network the lowest way to each router.
+The input is file and we translate the file using "initilize" function to struct of all the routers and from it to the neighbours struct i use "find_index" function to find the correct index int tne array of routers to numerate them.the neighbours struct has all the information to connect to the neighbours to reacive their dv and the all neighbours dv metrix "createRouter" initilize all those information.I use "sumChars" function in addtion to the right port to connect.we coonect to the Neighbours as threads usind "sender" function(client) then we send the dv to the "reciver" function (server) if the dv has lowest way to the main router then we "wake up" the "Calculator"function and it update the router dv and then we send it to all the outer neighbours of the main router after the calcultor is done it "wake up" all the sendres and print the via array. wake up is using conditional variable and all the calculation in the "Calculator" is made by locking the dv -Critical section.
+-------------------------------------------------------------------------------------------------
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+WARNING: Please don't change the files "ex3.c" "ex3.h" "Makefile" 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+How To Run The Programs in linux operation system.
+1) Enter to the Terminal.
+2) Copy the files to you’re destination folder.
+3) Enter the folder that contain the files and print in the terminal the
+command:
+"cd DESTINATION FOLDER/..".
+4) To compile the program enter the command: "make"
+5) To Run print the command:"./app "file name" "router name"" as many routers that the network has. jast chang the router name name accordinly.
+
+
